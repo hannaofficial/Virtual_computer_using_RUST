@@ -75,6 +75,7 @@ cargo test
 ## Example Usage
 
 ```rust
+// In  src/main.rs
 use Virtual_computer_using_RUST::{BoolArray, circuits::{arithmetic::{not16,and16}, muxes::*}};  // Virtual_computer_using_RUST is your root directory
 
 fn main() {
