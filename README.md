@@ -37,7 +37,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 <!-- end list -->
 
 ```bash
-git clone https://github.com/yourusername/logical_foundation.git
+git clone https://github.com/yourusername/Virtual_computer_using_RUST.git
 ```
 
   * Navigate to the project directory:
@@ -45,7 +45,7 @@ git clone https://github.com/yourusername/logical_foundation.git
 <!-- end list -->
 
 ```bash
-cd logical_foundation
+cd Virtual_computer_using_RUST
 ```
 
   * Build the project:
@@ -75,7 +75,7 @@ cargo test
 ## Example Usage
 
 ```rust
-use logical_foundation::{BoolArray, circuits::{arithmetic::{not16,and16}, muxes::*}};
+use Virtual_computer_using_RUST::{BoolArray, circuits::{arithmetic::{not16,and16}, muxes::*}};  // Virtual_computer_using_RUST is your root directory
 
 fn main() {
     let a = [true; 16];
@@ -94,15 +94,6 @@ fn main() {
   * All components built from NAND gates
   * No shortcuts using Rust's native operators
 
-### Memory Efficiency
-
-  * Stack allocation where possible
-  * Explicit heap usage only for dynamic components
-
-### Type Safety
-
-  * Clear separation between computation and display
-  * Zero-cost abstractions for hardware simulation
 
 ## Roadmap
 
@@ -113,7 +104,7 @@ fn main() {
 
 ## Contributing
 
-For now I am building the fundamental block and I am in learning phase I don't think contribution make sense now.But you suggestion will always matter.Feel free to ask questions and give suggestion.
+For now I am building the fundamental block and I am in learning phase I don't think contribution make sense now.But your suggestion will always matter.Feel free to ask questions and give suggestion.
 
 ## License
 
