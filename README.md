@@ -112,19 +112,13 @@ fn main() {
 4. **Core Infrastructure**
    - BoolArray display wrapper
    - Modular project structure
+5. **Completed the basic ALU implementation**
+   - Can do addition, substraction (basic brain of computer)
+   - x+y, x-y, y-x, 0, 1, -1, x, y, !x, !y, -x, -y, x+1, y+1, x-1, y-1, x&y, and x|y (all the operation our alu can handle)
+   -next we have to implement the memory of the brain.
+   
+### 🔧 Next Goal : The Memory Unit
 
-### 🔧 Current Focus: ALU Implementation
-Building the Arithmetic Logic Unit by combining:
-- Arithmetic operations (add16)
-- Logical operations (and16)
-- Multiplexers for operation selection
-
-## Roadmap
-
-  * Implement full ALU
-  * Add CPU components (registers, PC)
-  * Build assembly language compiler
-  * Add visual simulation
 
 ## Contributing
 
