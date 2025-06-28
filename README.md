@@ -5,17 +5,6 @@
 
 This project implements a 16-bit virtual computer from first principles, following the "Nand to Tetris" methodology with Rust's safety guarantees. It serves as both an educational tool for computer architecture and a practical Rust learning experience.
 
-## 🏗️ Project Structure
-logical_foundation/
-├── Cargo.toml          # Project configuration
-├── src/
-│   ├── lib.rs          # Core library (BoolArray definition)
-│   ├── main.rs         # CLI interface and tests
-│   └── circuits/       # Hardware components
-│       ├── mod.rs      # Module declarations
-│       ├── gates.rs    # Fundamental logic gates
-│       ├── arithmetic.rs # ALU components
-│       └── muxes.rs    # Multiplexers
 
 
 
