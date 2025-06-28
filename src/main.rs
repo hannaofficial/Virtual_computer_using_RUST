@@ -2,13 +2,15 @@
 
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------
-// declaring storage for half addr output
+//Fundamental gates
 
 mod gates;
 use gates::gate::{nand,not,and,or,xor} ;
 
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 use std::fmt;
 
+// declaring storage for half addr output
 struct HalfAdderOutput {
     sum:bool,
     carry:bool,
@@ -53,14 +55,14 @@ fn full_adder(a:bool, b:bool, carry_in:bool) -> FullAdderOutput{
 }
 
 
-struct BoolArray([bool;16]); // tuple struct we use 
+struct BoolArray([bool;16]); // tuple struct we use // we can use this to display any 16bool array
 // you can also defined it as 
 // struct BoolArray{
 //              bits: [bool;16] , // name field
 //                   }
 
 impl fmt::Display for BoolArray {
-  fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{ // &represent refrences
+  fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result{ // &represent refrences // &mut just borrowing the writing page for some time
     for bit in self.0.iter().rev(){ // self.0 means this is the first position of tuple struct here it is array ([2],[1])  position 0 pos 1
         // self is directly calling the struct but self.0 is the thing inside struct
         write!(f, "{}", if *bit {'1'} else {'0'})?; // *bit to get the value of bit ? is error jhandling
@@ -81,17 +83,48 @@ fn add16(a:[bool;16], b:[bool; 16]) -> [bool; 16]{
     result
 }
 
+fn not16(a:[bool;16])-> [bool;16]{
+    let mut not16_result:[bool;16] = [false;16];
+    for i in 0..16{
+        not16_result[i] = not(a[i]);
+    }
+    not16_result
+
+}
+
+fn and16(a:[bool;16], b:[bool;16])-> [bool;16]{
+    let mut and16_result:[bool;16] = [false;16];
+    for i in 0..16{
+        and16_result[i] = and(a[i],b[i]);
+    }
+    and16_result
+}
+
+fn mux16(a:[bool;16], b:[bool; 16], sel:bool) -> [bool;16]{
+    let mut mux16_result:[bool;16] = [false;16];
+    for i in 0..16{
+        mux16_result[i] = if !sel {a[i]} else {b[i]};
+    }
+    mux16_result
+}
+
 
 fn main() {
     let mut a = [false; 16]; // All zeros
     let mut b = [false; 16];
     a[1] = true;
-    b[2] = true; 
+    b[2] = true;
+    let result:[bool;16] = add16(a, b) ;
     
-    println!("{} + {} = {}", 
+    println!("{} + {} = {},\n not16: {} , \n and16: {}, \n mux16: {}", 
         BoolArray(a), 
         BoolArray(b), 
-        BoolArray(add16(a, b)));
+        BoolArray(result),
+        BoolArray(not16(result)),
+        BoolArray(and16(a,b)),
+        BoolArray(mux16(a,b,true))
+    );
+        
     
     
 }
