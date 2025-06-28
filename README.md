@@ -95,6 +95,29 @@ fn main() {
   * All components built from NAND gates
   * No shortcuts using Rust's native operators
 
+## 🚧 Project Progress
+
+### ✅ Completed Components
+1. **Fundamental Logic Gates**
+   - NAND, NOT, AND, OR, XOR
+   - All built from NAND-only operations
+
+2. **16-bit Operations**
+   - NOT16, AND16
+   - 16-bit adder (add16)
+
+3. **Data Routing**
+   - 16-bit multiplexer (mux16)
+
+4. **Core Infrastructure**
+   - BoolArray display wrapper
+   - Modular project structure
+
+### 🔧 Current Focus: ALU Implementation
+Building the Arithmetic Logic Unit by combining:
+- Arithmetic operations (add16)
+- Logical operations (and16)
+- Multiplexers for operation selection
 
 ## Roadmap
 
