@@ -44,7 +44,6 @@ pub fn full_adder(a:bool, b:bool, carry_in:bool) -> FullAdderOutput{
       FullAdderOutput { 
         sum:second.sum, carry: carry_out
      }
-
 }
 
 pub fn add16(a:[bool;16], b:[bool; 16]) -> [bool; 16]{

@@ -51,6 +51,7 @@ impl fmt::Display for AluOutput {
     
 }
 
+// mux16 is just the selector between a and b based on sel
 fn alu(x: [bool;16],y:[bool;16],control:AluControlBits) -> AluOutput{
     let x1 = mux16(x, [false;16], control.zx ); // first four line are just to process the input
     let x2 = mux16(x1, not16(x1), control.nx);  // whether should take it or not || negate it or not

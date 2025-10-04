@@ -4,3 +4,4 @@
 pub mod gates;
 pub mod arithmetic;
 pub mod muxes;
+pub mod memory;
