@@ -43,6 +43,22 @@ impl Register{
     }
 }
 
+
+// #[derive(Default)]
+pub struct RAM8{
+    registers: [Register; 8],
+}
+
+impl RAM8 {
+    pub fn new() -> Self{
+        Self::default()
+    }
+
+
+    
+}
+
+
 // struct Color {
 //     r: u8,
 //     g: u8,

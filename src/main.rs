@@ -1,5 +1,5 @@
 // imports from  module circuits
-mod circuits;
+pub mod circuits;
 use circuits::{
     arithmetic::{add16, not16, and16, half_adder, HalfAdderOutput},
     muxes::mux16,
