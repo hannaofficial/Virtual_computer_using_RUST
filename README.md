@@ -116,8 +116,11 @@ fn main() {
    - Can do addition, substraction (basic brain of computer)
    - x+y, x-y, y-x, 0, 1, -1, x, y, !x, !y, -x, -y, x+1, y+1, x-1, y-1, x&y, and x|y (all the operation our alu can handle)
    -next we have to implement the memory of the brain.
+5. **Implementing Memory**
+   - Register Done
+   - RAM8 one the way
    
-### 🔧 Next Goal : The Memory Unit
+### 🔧 Next Goal :  Writing RAM
 
 
 ## Contributing

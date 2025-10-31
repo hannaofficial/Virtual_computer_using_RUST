@@ -44,7 +44,7 @@ impl Register{
 }
 
 
-// #[derive(Default)]
+#[derive(Default)]
 pub struct RAM8{
     registers: [Register; 8],
 }
